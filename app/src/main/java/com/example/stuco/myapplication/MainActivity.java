@@ -36,12 +36,15 @@ public class MainActivity extends AppCompatActivity {
         btnCalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 totalTextView.setTextSize(50);
+
                 if(txtPercentage.getText().toString().isEmpty()){
                     totalTextView.setTextSize(30);
                     totalTextView.setText("Please input a percentage");
                     return;
                 }
+
                 float percentage = Float.parseFloat(txtPercentage.getText().toString());
 
                 if(txtNumber.getText().toString().isEmpty()) {
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     totalTextView.setText("Please input a number");
                     return;
                 }
+
                 float number = Float.parseFloat(txtNumber.getText().toString());
 
                 float dec = percentage/100;
